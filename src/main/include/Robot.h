@@ -19,11 +19,10 @@ class Robot : public frc::IterativeRobot
 
 //Returning a void and taking nothing in 
 
-
-
  private:
  
- //DriveTrain a_trainDrive;
+ DriveTrain a_trainDrive;
+ frc::Joystick a_Joystick;
 
 };
 

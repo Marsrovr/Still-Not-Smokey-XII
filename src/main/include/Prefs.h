@@ -15,3 +15,5 @@
 #define RIGHT6 6 
 #define RIGHT7 7 
 
+#define JOYSTICK_PORT 1
+
