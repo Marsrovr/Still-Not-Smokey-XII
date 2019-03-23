@@ -15,6 +15,8 @@ class DriveTrain{
     //constructers don't return stuff
 
     void Update(float leftSpeed, float rightSpeed);
+    float StealRight(); 
+    float StealLeft();
 
 
  private:
