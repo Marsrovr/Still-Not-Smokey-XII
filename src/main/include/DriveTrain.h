@@ -6,11 +6,9 @@ class DriveTrain{
 
 
 
-
-
  public:
 
-    DriveTrain(int Left1, int Left2, int Left3, int Right4, int Right6, int Right7);
+    DriveTrain(int Left1, int Left2, /*int Left3*/ int Right4, int Right6 /*int Right7*/);
 
     //constructers don't return stuff
 
@@ -18,15 +16,16 @@ class DriveTrain{
     float StealRight(); 
     float StealLeft();
 
-
+   bool Drive2Dist(float dist);
+    
  private:
 
     WPI_TalonSRX a_Left1;
     WPI_TalonSRX a_Left2;
-    WPI_TalonSRX a_Left3;
+    //WPI_TalonSRX a_Left3;
     WPI_TalonSRX a_Right4;
     WPI_TalonSRX a_Right6;
-    WPI_TalonSRX a_Right7;
+    //WPI_TalonSRX a_Right7;
 
     frc::SpeedControllerGroup a_LeftSide; 
     frc::SpeedControllerGroup a_RightSide; 

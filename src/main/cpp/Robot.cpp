@@ -3,7 +3,7 @@
 #include <Prefs.h>
 
 Robot::Robot():
-a_trainDrive(LEFT1, LEFT2, LEFT3, RIGHT4, RIGHT6, RIGHT7),
+a_trainDrive(LEFT1, LEFT2, /*LEFT3*/ RIGHT4, RIGHT6 /*RIGHT7*/),
 a_Joystick(JOYSTICK_PORT) {
 
 /*have to initalize the member (run the constructer) 
