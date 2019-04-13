@@ -24,3 +24,6 @@
 //#define RIGHT7 7 
 
 #define JOYSTICK_PORT 1
+
+#define WHEELE 2*4*3.14159265 
+#define REV 4096 

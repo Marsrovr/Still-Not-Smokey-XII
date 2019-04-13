@@ -8,7 +8,7 @@ class DriveTrain{
 
  public:
 
-    DriveTrain(int Left1, int Left2, /*int Left3*/ int Right4, int Right6 /*int Right7*/);
+    DriveTrain(int Left1, int Left2, /*int Left3,*/ int Right4, int Right6 /*int Right7,*/);
 
     //constructers don't return stuff
 

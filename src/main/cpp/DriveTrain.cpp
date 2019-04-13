@@ -1,8 +1,9 @@
 
 #include <DriveTrain.h>
+#include <Prefs.h>
 
 
-DriveTrain::DriveTrain(int Left1, int Left2 /*int Left3*/, int Right4, int Right6 /*int Right7*/)
+DriveTrain::DriveTrain(int Left1, int Left2 /*int Left3,*/, int Right4, int Right6 /*int Right7,*/)
 :
 a_Left1(Left1), 
 a_Left2(Left2), 
@@ -10,8 +11,8 @@ a_Left2(Left2),
 a_Right4(Right4), 
 a_Right6(Right6), 
 //a_Right7(Right7),
-a_LeftSide(a_Left1, a_Left2 /*a_Left3*/),
-a_RightSide(a_Right4, a_Right6 /*a_Right7*/), 
+a_LeftSide(a_Left1, a_Left2 /*,a_Left3*/),
+a_RightSide(a_Right4, a_Right6 /*,a_Right7*/), 
 a_Split(a_LeftSide, a_RightSide)
 {
 
@@ -28,6 +29,7 @@ a_Split(a_LeftSide, a_RightSide)
 
 void DriveTrain::Update(float leftSpeed, float rightSpeed) { 
 
+    rightSpeed *= -1; 
     a_Split.TankDrive(leftSpeed, rightSpeed, false);
     //Tank drive is a method for differential class
 
@@ -35,6 +37,7 @@ void DriveTrain::Update(float leftSpeed, float rightSpeed) {
     //archa drive = single joy stick <-- use
 
     //Tells motors to go 
+
 
 }
 
@@ -52,14 +55,16 @@ float DriveTrain::StealLeft() {
 
 }
 
-bool Drive2Dist(float dist) {
+bool DriveTrain::Drive2Dist(float dist) {
 
-    /*float far = (StealRight() + StealLeft()) / 2 ; 
+    float far = (StealRight() + StealLeft()) / 2 ; 
+    float whateverYouWant = (dist/WHEELE) * REV;
 
-    if(far == dist) {
-
-        
-        
-    }*/
-
+    if(far >= whateverYouWant) { 
+        Update(0.0, 0.0);
+        return true;
+    } else {
+        Update(0.6, 0.6);
+        return false;
+    }
 } 
