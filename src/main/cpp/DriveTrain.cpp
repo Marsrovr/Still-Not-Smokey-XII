@@ -67,4 +67,26 @@ bool DriveTrain::Drive2Dist(float dist) {
         Update(0.6, 0.6);
         return false;
     }
+
 } 
+
+bool DriveTrain::ShipDrive(int leftboi, int rightboi, int dist) {
+//CHANGE BOIS TO STEAL VARs
+
+    int tempDist = (leftboi + rightboi) / 2;
+    if (tempDist < dist) {
+        if (leftboi > rightboi) {
+        // if left sids is too fast, slow down left side 
+        // we do that later 
+        } else if (leftboi < rightboi) {
+            // if left side is lagging, speed up left side 
+        } else {
+            //  it stays the same
+        }
+        return false; 
+
+    } else {
+        //Stop motors 
+        return true;
+    }
+}

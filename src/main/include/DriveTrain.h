@@ -17,6 +17,9 @@ class DriveTrain{
     float StealLeft();
 
    bool Drive2Dist(float dist);
+
+   bool ShipDrive(int leftboi, int rightboi, int dist);
+
     
  private:
 
