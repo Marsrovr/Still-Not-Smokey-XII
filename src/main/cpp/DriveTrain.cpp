@@ -3,27 +3,25 @@
 #include <Prefs.h>
 
 
-DriveTrain::DriveTrain(/*int Left1,*/ int Left2, /*int Left3, int Right4, */int Right6 /*int Right7,*/)
+DriveTrain::DriveTrain(int Left2, int Right6 /*int Left3, int Right4, int Right7*/)
 :
-//a_Left1(Left1), 
-a_Left2(Left2), 
+a_Left2(Left2),
+a_Right6(Right6), 
+//a_Left1(Left1),  
 //a_Left3(Left3), 
 //a_Right4(Right4), 
-a_Right6(Right6), 
 //a_Right7(Right7),
-a_LeftSide(/*a_Left1,*/a_Left2 /*,a_Left3*/),
-a_RightSide(/*a_Right4,*/ a_Right6 /*,a_Right7*/), 
+a_LeftSide(a_Left2 /*a_Left1,a_Left3*/),
+a_RightSide(a_Right6 /*a_Right4,a_Right7*/), 
 a_Split(a_LeftSide, a_RightSide)
 {
-
-    //constructing stuff
+    // 79, 87, 99, 104 
+    // constructing stuff
 
     a_Left2.ConfigSelectedFeedbackSensor(QuadEncoder, 0, 0); //declaring that we have an encoder
-    a_Right6.ConfigSelectedFeedbackSensor(QuadEncoder, 0, 0); 
+    a_Right6.ConfigSelectedFeedbackSensor(QuadEncoder, 0, 0); //still declaring that we have an encoder
 
-    //Used in differential function 
-
-
+    // Used in differential function 
 
 }
 
@@ -31,19 +29,20 @@ void DriveTrain::Update(float leftSpeed, float rightSpeed) {
 
     rightSpeed *= -1; 
     a_Split.TankDrive(leftSpeed, rightSpeed, false);
-    //Tank drive is a method for differential class
 
-    //don't use curvature drive = two joystick 
-    //archa drive = single joy stick <-- use
+    /* Tank drive is a method for differential class
 
-    //Tells motors to go 
+    - Don't use curvature drive = two joystick 
+    - Archa drive = single joy stick <-- use
+
+    - Tells motors to go */ 
 
 
 }
 
 float DriveTrain::StealRight() { 
 
-    //goal: call the method from robot -> return a value 
+    // goal: call the method from robot -> return a value 
 
     return a_Right6.GetSelectedSensorPosition(0);
 
@@ -70,23 +69,22 @@ bool DriveTrain::Drive2Dist(float dist) {
 
 } 
 
-bool DriveTrain::ShipDrive(int leftboi, int rightboi, int dist) {
-//CHANGE BOIS TO STEAL VARs
+bool DriveTrain::ShipDrive(int dist) {
 
-    int tempDist = (leftboi + rightboi) / 2;
+    int tempDist = (StealLeft() + StealRight()) / 2 ; //tells us the distance we have gone
+
     if (tempDist < dist) {
-        if (leftboi > rightboi) {
-        // if left sids is too fast, slow down left side 
-        // we do that later 
-        } else if (leftboi < rightboi) {
-            // if left side is lagging, speed up left side 
+        if (StealLeft() > StealRight()) {
+            Update(.35, .5) ;
+        } else if (StealLeft() < StealRight()) {
+            Update(.5, .35) ; 
         } else {
-            //  it stays the same
-        }
-        return false; 
-
+            Update(.5, .5);  
+        }  //.5 = normal speed 
+        return false ; 
     } else {
-        //Stop motors 
+        Update(0, 0);   
         return true;
     }
+
 }
