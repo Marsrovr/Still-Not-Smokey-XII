@@ -73,6 +73,8 @@ bool DriveTrain::ShipDrive(int dist) {
 
     int tempDist = (StealLeft() + StealRight()) / 2 ; //tells us the distance we have gone
 
+// c:
+
     if (tempDist < dist) {
         if (StealLeft() > StealRight()) {
             Update(.35, .5) ;
