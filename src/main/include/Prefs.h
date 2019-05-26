@@ -18,7 +18,8 @@
 
 #define LEFT2 2
 #define RIGHT6 6 
-//#define LEFT1 1
+#define BLASTER 1
+//#define LEFT1 1 //change number if ever uncommented
 //#define LEFT3 3 
 //#define RIGHT4 4
 //#define RIGHT7 7 
@@ -27,3 +28,5 @@
 
 #define WHEELE 2*4*3.14159265 
 #define REV 4096 
+
+#define RELAY_PORT 5 
