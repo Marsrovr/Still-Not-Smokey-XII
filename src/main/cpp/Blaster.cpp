@@ -9,7 +9,10 @@ a_blaster(blaster),
 a_digit(digit)
 {
 
-
 }
  
+void Blaster::Updated(float alldatpower) {
 
+    a_blaster.Set(alldatpower);
+
+} 

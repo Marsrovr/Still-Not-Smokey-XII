@@ -9,7 +9,7 @@ class Blaster{
 
      Blaster(int blaster, int digit);
 
-     
+     void Updated(float alldatpower); 
 
     private: 
 
@@ -17,5 +17,4 @@ class Blaster{
      
      frc::DigitalOutput a_digit;
        
-}
-
+};
