@@ -3,8 +3,8 @@
 #include <Prefs.h>
 
 Robot::Robot():
-a_trainDrive( LEFT2, RIGHT6/*LEFT1, LEFT3, RIGHT4 ,RIGHT7*/),
-a_Joystick(JOYSTICK_PORT) {
+a_trainDrive(LEFT2, RIGHT6/*LEFT1, LEFT3, RIGHT4 ,RIGHT7*/),
+a_Joystick(JOYSTICK_PORT), a_Joystuck(J0YSTUCK_P0RT) {
 
 /* 
     - Have to initalize the member (run the constructer) 
@@ -49,7 +49,8 @@ void Robot::TeleopPeriodic() {
   // Varible in the function: only lasts duration of the function
 
   a_trainDrive.Update(a_Joystick.GetRawAxis(1), a_Joystick.GetRawAxis(5));
-  
+  a_Blaster.Updated(a_Joystuck.GetRawAxis(1));
+
 }
 
 void Robot::TestPeriodic() {
