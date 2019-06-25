@@ -28,7 +28,7 @@ class Robot : public frc::IterativeRobot
  Blaster a_Blaster;
  DriveTrain a_trainDrive;
  frc::Joystick a_Joystick;
- frc::Joystuck a_Joystuck; 
+ frc::Joystick a_Joystuck; 
 
 };
 

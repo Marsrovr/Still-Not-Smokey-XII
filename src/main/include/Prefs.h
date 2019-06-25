@@ -25,7 +25,8 @@
 //#define RIGHT7 7 
 
 #define JOYSTICK_PORT 1
-#define J0YSTUCK_P0RT 2 //Hello future freshman, this is the joystick for the nerf gun c:                                                                                                                                                    
+#define J0YSTUCK_P0RT 2 
+//Hello future freshman, this is the joystick for the nerf gun c:                                                                                                                                                    
 
 
 #define WHEELE 2*4*3.14159265 
