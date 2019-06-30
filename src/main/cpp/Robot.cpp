@@ -50,7 +50,7 @@ void Robot::TeleopPeriodic() {
 
   // Varible in the function: only lasts duration of the function
 
-  a_trainDrive.Update(a_Joystick.GetRawAxis(1), a_Joystick.GetRawAxis(2));
+  a_trainDrive.Update(-1 * a_Joystick.GetRawAxis(1), a_Joystick.GetRawAxis(2));
   a_Blaster.Updated(a_Joystuck.GetRawAxis(1));
 
 }
