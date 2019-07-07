@@ -53,6 +53,8 @@ void Robot::TeleopPeriodic() {
   a_trainDrive.Update(-1 * a_Joystick.GetRawAxis(1), a_Joystick.GetRawAxis(2));
   a_Blaster.Updated(a_Joystuck.GetRawAxis(1));
 
+  a_Blaster.pewieojgfkjhe5o8t7uaoieutiq3uw43iy7tyaesrhoijt2(a_Joystuck.GetRawButton(1));
+  
 }
 
 void Robot::TestPeriodic() {
