@@ -11,8 +11,8 @@ a_Right6(Right6),
 // a_Left3(Left3), 
 // a_Right4(Right4), 
 // a_Right7(Right7),
-a_LeftSide(a_Left2 /*a_Left1,a_Left3*/),
-a_RightSide(a_Right6 /*a_Right4,a_Right7*/), 
+a_LeftSide(a_Left2 /*a_Left1, a_Left3*/),
+a_RightSide(a_Right6 /*a_Right4, a_Right7*/), 
 a_Split(a_LeftSide, a_RightSide)
 {
     // 79, 87, 99, 104 

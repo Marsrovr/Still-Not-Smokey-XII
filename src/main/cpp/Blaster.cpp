@@ -19,7 +19,7 @@ void Blaster::Updated(float alldatpower) {
 
 /*
   No one: 
-  Kim:
+  Time:
   Jason:
   Andy:
   Mr. D'Avello:

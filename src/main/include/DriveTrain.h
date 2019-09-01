@@ -2,7 +2,7 @@
 #include <frc/WPILib.h> 
 #include "ctre/Phoenix.h"
 
-class DriveTrain{
+class DriveTrain {
 
  public:
 
@@ -41,5 +41,5 @@ class DriveTrain{
  //(>^-^)>-]===>
 
  // Vote Bernie Sanders 2020
-  
 
+  

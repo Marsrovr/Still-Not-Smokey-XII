@@ -3,7 +3,7 @@
 #include <Prefs.h>
 
 Robot::Robot():
-a_trainDrive(LEFT2, RIGHT6/*LEFT1, LEFT3, RIGHT4 ,RIGHT7*/),
+a_trainDrive(LEFT2, RIGHT6 /*LEFT1, LEFT3, RIGHT4, RIGHT7*/),
 a_Joystick(JOYSTICK_PORT),
 a_Joystuck(J0YSTUCK_P0RT),
 a_Blaster(BLASTER, RELAY_PORT),
