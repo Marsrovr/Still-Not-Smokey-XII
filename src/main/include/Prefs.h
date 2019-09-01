@@ -33,3 +33,5 @@
 #define REV 4096 
 
 #define RELAY_PORT 5 
+
+#define SPARK_MAX_PORT 3

@@ -30,6 +30,7 @@ class Robot : public frc::IterativeRobot
  frc::Joystick a_Joystick;
  frc::Joystick a_Joystuck; 
 
+  rev::CANSparkMax a_Neo;
 };
 
  //(>^-^)>-]===>

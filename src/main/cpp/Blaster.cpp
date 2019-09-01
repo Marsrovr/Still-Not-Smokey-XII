@@ -17,8 +17,18 @@ void Blaster::Updated(float alldatpower) {
 
 } 
 
+/*
+  No one: 
+  Kim:
+  Jason:
+  Andy:
+  Mr. D'Avello:
+  Woodie Flowers himself:
+  Not a single soul:
+  Me and Kordt: 
+*/
 void Blaster::pewieojgfkjhe5o8t7uaoieutiq3uw43iy7tyaesrhoijt2(bool shootQuestionMark) {
-    
+
     a_digit.Set(shootQuestionMark); // :parrot:
     // c:[>
 
