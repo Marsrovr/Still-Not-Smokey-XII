@@ -10,13 +10,13 @@
 
   } 
 
-  void AutoInit() { 
+  void Auto::AutoInit() { 
 
-
+    a_AutoPath = kMoveForward; 
 
   }
 
-  void AutoPeriodic(int leftDist, int rightDist) { 
+  void Auto::AutoPeriodic(int leftDist, int rightDist) { 
 
 
 

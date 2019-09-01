@@ -1,7 +1,9 @@
 
-#include <frc/WPILib.h> 
+#include <frc/WPILib.h>
+#include <rev/CANSparkMax.h> 
 #include <DriveTrain.h>
 #include <Blaster.h> 
+#include <Auto.h>
 
 class Robot : public frc::IterativeRobot 
 {
@@ -27,10 +29,13 @@ class Robot : public frc::IterativeRobot
  
  Blaster a_Blaster;
  DriveTrain a_trainDrive;
+ Auto a_AutoRoboto; 
  frc::Joystick a_Joystick;
  frc::Joystick a_Joystuck; 
 
-  // rev::CANSparkMax a_Neo;
+
+ rev::CANSparkMax a_Neo;
+
 };
 
  //(>^-^)>-]===>
